@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate:pg --schema ./src/db/schema.ts"
   },
   "dependencies": {
     "@nextui-org/react": "^2.3.6",
+    "@remixicon/react": "^4.2.0",
     "drizzle-orm": "^0.30.9",
     "framer-motion": "^11.1.7",
+    "jose": "^5.2.4",
     "next": "14.2.3",
     "postgres": "^3.4.4",
     "react": "^18",

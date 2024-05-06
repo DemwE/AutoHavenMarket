@@ -15,8 +15,10 @@ export const users = pgTable('users', {
     surname: varchar('surname').notNull(),
     email: varchar('email').unique().notNull(),
     password: varchar('password').notNull(),
+    // telephone: integer('telephone').notNull(),
     role: roles('role').default('user').notNull(),
     creation_date: date('creation_date').default(sql`now()`),
+    sessions: uuid('sessions').array(),
 });
 
 export const offers: any = pgTable('offers', {
