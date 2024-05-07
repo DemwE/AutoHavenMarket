@@ -28,9 +28,7 @@ export const offers: any = pgTable('offers', {
     description: varchar('description').notNull(),
     offer_from: varchar('offer_from').default('private').notNull(),
     mark_id: uuid('mark_id').references(() => carMarks.id).notNull(),
-    other_mark: varchar('other_mark'),
     model_id: uuid('model_id').references(() => carModels.id).notNull(),
-    other_model: varchar('other_model'),
     production_year: integer('production_year').notNull(),
     mileage: integer('mileage').notNull(),
     engine_capacity: integer('engine_capacity').notNull(),
@@ -56,7 +54,7 @@ export const carMarks = pgTable('car_marks', {
     add_date: date('creation_date').default(sql`now()`),
 });
 
-export const carModels = pgTable('models', {
+export const carModels = pgTable('car_models', {
     id: uuid('id').default(sql`gen_random_uuid()`).primaryKey(),
     mark_id: uuid('mark_id').references(() => carMarks.id).notNull(),
     name: varchar('name').notNull(),
