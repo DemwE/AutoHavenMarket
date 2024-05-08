@@ -51,13 +51,11 @@ export const offers: any = pgTable('offers', {
 
 export const carMarks = pgTable('car_marks', {
     id: uuid('id').default(sql`gen_random_uuid()`).primaryKey(),
-    name: varchar('name').notNull(),
-    add_date: date('creation_date').default(sql`now()`),
+    name: varchar('name').notNull().unique(),
 });
 
 export const carModels = pgTable('car_models', {
     id: uuid('id').default(sql`gen_random_uuid()`).primaryKey(),
     mark_id: uuid('mark_id').references(() => carMarks.id).notNull(),
     name: varchar('name').notNull(),
-    add_date: date('creation_date').default(sql`now()`),
 });

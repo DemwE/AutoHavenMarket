@@ -37,6 +37,7 @@ export default async function Offer({params}: { params: Params }) {
         {/*  <Image src={image} alt="Test Image" className="rounded-xl object-center object-contain" fill/>*/}
         {/*</div>*/}
         <ModalImage src={image} className={"h-96 w-[500px] rounded-xl"} alt="smoe"/>
+        <p>{offerData.offers.title}</p>
         <p>{offerData.car_marks.name} {offerData.car_models.name}</p>
         <div className="grid grid-cols-2">
           {images()}

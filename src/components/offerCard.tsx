@@ -7,7 +7,7 @@ export default function OfferCard({offer, cdn}: { offer: any, cdn: string }) {
          className="bg-amber-50 rounded-xl w-full xl:w-[60%] p-3 space-y-2">
       <OptimizedImage src={cdn + offer.offers.main_image} alt={offer.offers.id}
                       className="w-full h-96 rounded-xl"/>
-      <h2 className="text-xl">{offer.car_marks?.name} {offer.car_models?.name}</h2>
+      <h2 className="text-xl">{offer.offers.title}</h2>
       {/*<h2>{offer.offers.title}</h2>*/}
       <div className="grid grid-cols-4">
         <p>Production: {offer.offers.production_year}r</p>
