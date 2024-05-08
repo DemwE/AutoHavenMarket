@@ -20,7 +20,7 @@ export default function Navigation() {
 			<NavbarContent>
 				<NavbarBrand>
 					<a href="/">
-						<h1 className="text-3xl">AutoHaven</h1>
+						<h1 className="text-5xl font-JainiPurva">AutoHaven</h1>
 					</a>
 				</NavbarBrand>
 			</NavbarContent>
