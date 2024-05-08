@@ -43,6 +43,7 @@ export const offers: any = pgTable('offers', {
     state: states('state').notNull(),
     vin: varchar('vin').notNull(),
     price: integer('price').notNull(),
+    main_image: varchar('main_image'),
     images: varchar('images').array(),
     offer_state: offer_states('offer_state').default('active').notNull(),
     creation_date: date('creation_date').default(sql`now()`),
